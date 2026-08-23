@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        AI Deepfake Detection System
+    </title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 550px;
+            margin: 80px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #cccccc;
+            text-align: center;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        .upload-box {
+            margin-top: 30px;
+            padding: 25px;
+            border: 2px dashed #999;
+            border-radius: 10px;
+        }
+
+        input {
+            margin: 15px;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+            padding: 13px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .info {
+            color: #666;
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+        🤖 AI-Based Deepfake Detection
+    </h1>
+
+    <p>
+        Detect whether an image or video
+        is REAL or DEEPFAKE.
+    </p>
+
+    <div class="upload-box">
+
+        <form
+            action="/detect"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+
+            <h3>
+                📷 Upload Image
+            </h3>
+
+            <input
+                type="file"
+                name="image"
+                accept=".jpg,.jpeg,.png"
+            >
+
+            <hr>
+
+            <h3>
+                🎥 Upload Video
+            </h3>
+
+            <input
+                type="file"
+                name="video"
+                accept=".mp4,.avi,.mov,.mkv"
+            >
+
+            <br>
+
+            <button type="submit">
+                🔍 Detect Deepfake
+            </button>
+
+        </form>
+
+    </div>
+
+    <p class="info">
+
+        Supported Images:
+        JPG, JPEG, PNG
+
+        <br>
+
+        Supported Videos:
+        MP4, AVI, MOV, MKV
+
+    </p>
+
+</div>
+
+</body>
+
+</html>
